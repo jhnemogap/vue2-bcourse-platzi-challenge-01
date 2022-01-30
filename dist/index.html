@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - vue2-bcourse-platzi-challenge-01</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+  <header>
+    <h1>Cursos de Platzi 🤑</h1>
+    <form>
+      <input type="text" placeholder="Nombre del curso">
+      <input type="number" placeholder="Duración">
+      <button>Agregar</button>
+    </form>
+  </header>
+
+  <main>
+    <h2>Lista de Cursos</h2>
+    <ul>
+      <li v-for="course in courses">
+        {{ course?.title }} - {{ course?.time }}
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    <h4 v-if="!courses.lenght">
+      Aún no has tomado un curso
+    </h4>
+  </footer>
+</div>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
